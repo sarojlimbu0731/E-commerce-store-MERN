@@ -1,7 +1,25 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+
+    users:[
+      {
+        name:"saroj",
+        email:"saroj@gmail.com",
+        password:bcrypt.hashSync('12345'),
+        isAdmin:true
+
+      },
+      {
+        name:"bikram",
+        email:"bikram@gmail.com",
+        password: bcrypt.hashSync('67890'),
+        isAdmin:false
+
+      }
+  ],
     products:[
   {
-    _id :"1",
     name: "nike shoes",
     slug: "nike-shoes",
     category: "shoes",
@@ -14,7 +32,6 @@ const data = {
     description: "branded shoes",
   },
   {
-    _id:"2",
     name: "Addidas shoes",
     slug: "addidas-shoes",
     category: "shoes",
@@ -27,7 +44,6 @@ const data = {
     description: "running shoes",
   },
   {
-    _id:"3",
     name: "vans shoes",
     slug: "vans-shoes",
     category: "shoes",
